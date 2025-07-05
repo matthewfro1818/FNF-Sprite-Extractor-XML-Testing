@@ -19,7 +19,7 @@ import states.editors.content.PsychJsonPrinter;
 
 class CharacterEditorState extends MusicBeatState implements PsychUIEventHandler.PsychUIEvent
 { 
-	var char:String = 'bf';
+	var char:String = null;
 
 	var character:Character;
 	var ghost:FlxSprite;
