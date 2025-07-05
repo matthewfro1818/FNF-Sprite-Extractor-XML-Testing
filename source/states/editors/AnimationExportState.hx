@@ -15,8 +15,8 @@ import openfl.display.PNGEncoderOptions;
 import openfl.geom.Rectangle;
 import openfl.geom.Matrix;
 import lime.utils.Assets;
-import Character;
-import Paths;
+import objects.Character;
+import backend.Paths;
 import sys.io.File;
 import sys.FileSystem;
 
