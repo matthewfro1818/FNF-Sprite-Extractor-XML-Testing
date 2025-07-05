@@ -880,10 +880,28 @@ class CharacterEditorState extends MusicBeatState implements PsychUIEventHandler
 		if(FlxG.keys.pressed.CONTROL) ctrlMult = 0.25;
 
 		// CAMERA CONTROLS
-		if (FlxG.keys.pressed.J) FlxG.camera.scroll.x -= elapsed * 500 * shiftMult * ctrlMult;
-		if (FlxG.keys.pressed.K) FlxG.camera.scroll.y += elapsed * 500 * shiftMult * ctrlMult;
-		if (FlxG.keys.pressed.L) FlxG.camera.scroll.x += elapsed * 500 * shiftMult * ctrlMult;
-		if (FlxG.keys.pressed.I) FlxG.camera.scroll.y -= elapsed * 500 * shiftMult * ctrlMult;
+		if (FlxG.keys.pressed.J)
+		{ 
+			FlxG.camera.scroll.x -= elapsed * 500 * shiftMult * ctrlMult;
+		}
+		if (FlxG.keys.pressed.K)
+		{
+			FlxG.camera.scroll.y += elapsed * 500 * shiftMult * ctrlMult;
+		}
+		if (FlxG.keys.pressed.L)
+		{ 
+			FlxG.camera.scroll.x += elapsed * 500 * shiftMult * ctrlMult;
+		}
+		if (FlxG.keys.pressed.I) 
+		{
+			FlxG.camera.scroll.y -= elapsed * 500 * shiftMult * ctrlMult;
+		}
+
+		// CHARACTER EXPORT
+                if (FlxG.keys.justPressed.E)
+		{
+			MusicBeatState.switchState(new states.editors.AnimationExportState(selCharacter));
+		}
 
 		var lastZoom = FlxG.camera.zoom;
 		if(FlxG.keys.justPressed.R && !FlxG.keys.pressed.CONTROL) FlxG.camera.zoom = 1;
