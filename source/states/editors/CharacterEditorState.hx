@@ -898,12 +898,14 @@ class CharacterEditorState extends MusicBeatState implements PsychUIEventHandler
 		{
 			FlxG.camera.scroll.y -= elapsed * 500 * shiftMult * ctrlMult;
 		}
+		// END OF CAMERA CONTROLS
 
 		// CHARACTER EXPORT
                 if (FlxG.keys.justPressed.E)
 		{
 			MusicBeatState.switchState(new states.editors.AnimationExportState(char));
 		}
+		// END OF CHARACTER EXPORT
 
 		var lastZoom = FlxG.camera.zoom;
 		if(FlxG.keys.justPressed.R && !FlxG.keys.pressed.CONTROL) FlxG.camera.zoom = 1;
