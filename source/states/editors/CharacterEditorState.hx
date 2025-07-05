@@ -19,8 +19,6 @@ import states.editors.content.PsychJsonPrinter;
 
 class CharacterEditorState extends MusicBeatState implements PsychUIEventHandler.PsychUIEvent
 { 
-	var char:String = 'bf';
-
 	var character:Character;
 	var ghost:FlxSprite;
 	var animateGhost:FlxAnimate;
@@ -903,7 +901,7 @@ class CharacterEditorState extends MusicBeatState implements PsychUIEventHandler
 		// CHARACTER EXPORT
                 if (FlxG.keys.justPressed.E)
 		{
-			MusicBeatState.switchState(new states.editors.AnimationExportState(char));
+			MusicBeatState.switchState(new states.editors.AnimationExportState(character));
 		}
 		// END OF CHARACTER EXPORT
 
